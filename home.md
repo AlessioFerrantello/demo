@@ -9,7 +9,7 @@ Questo report presenta un'analisi dettagliata di due comuni strumenti d'attacco 
 1. Configurare un ambiente di test utilizzando una macchina virtuale Kali Linux.
 2. Installare e configurare Burp Suite per il controllo del traffico.
 3. Installare DVWA come web application di prova per simulare vulnerabilità.
-4. Configurare FoxyProxy su Firefox per reindirizzare il traffico attraverso Burp Suite.
+4. Configurare FoxyProxy su Firefox per reindirizzare il traffico attraverso Burp Suite. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_FoxyProxy.png)
 
 ### Attività 2: Brute Force Attack
 1. Avviare DVWA e selezionare la modalità di sicurezza "low" per facilitare l'attacco.
