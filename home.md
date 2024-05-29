@@ -12,10 +12,10 @@ Questo report presenta un'analisi dettagliata di due comuni strumenti d'attacco 
 4. Configurare FoxyProxy su Firefox per reindirizzare il traffico attraverso Burp Suite. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_FoxyProxy.png)
 
 ### Attività 2: Brute Force Attack
-1. Avviare DVWA e selezionare la modalità di sicurezza "low" per facilitare l'attacco.
-2. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco.
+1. Avviare DVWA e selezionare la modalità di sicurezza "low" per facilitare l'attacco. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_sicurezzaDVWA.png)
+2. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco.![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_intercetto.png)
 3. Utilizzare un tool di Brute Force (ad esempio Hydra) per tentare di indovinare la password di accesso a un account utente su DVWA.
-4. Analizzare il traffico con Burp Suite per identificare i tentativi di accesso non autorizzati e le possibili vulnerabilità nel sistema.
+4. Analizzare il traffico con Burp Suite per identificare i tentativi di accesso non autorizzati e le possibili vulnerabilità nel sistema. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_analisi.png)
 
 ### Attività 3: SQL Injection
 1. Avviare DVWA e selezionare la modalità di sicurezza "medium" per simulare una vulnerabilità di SQL Injection.
