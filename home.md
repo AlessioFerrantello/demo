@@ -70,8 +70,8 @@ Principali caratteristiche:
 
 ### Esecuzione dell'Attacco SQL Injection
 
-1. **Accesso a DVWA**: Accedere alla scheda "SQL Injection" su DVWA. Inserire il comando `' OR 1=1 #` nel campo ID per ottenere tutte le voci del database. ![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_followingCommand.png)
-2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare una richiesta SQL Injection. La richiesta sarà catturata da Burp. ![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_intercetto.png)
+1. **Accesso a DVWA**: Accedere alla scheda "SQL Injection" su DVWA. Inserire il comando `' OR 1=1 #` nel campo ID per ottenere tutte le voci del database. ![screenshot_SQLInjection](screenshot_SQLInjection/Screenshot_followingCommand.png)
+2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare una richiesta SQL Injection. La richiesta sarà catturata da Burp. ![screenshot_SQLInjection](screenshot_SQLInjection/Screenshot_intercetto.png)
 3. **Salvataggio della Richiesta**: Salvare la richiesta intercettata in un file di testo (`request.txt`).
 4. **Utilizzo di SQLmap**: Utilizzare il terminal di Kali Linux per automatizzare l'attacco SQL Injection con il comando: `sqlmap -h`.
 5. **Estrazione dati**:
@@ -79,9 +79,9 @@ Principali caratteristiche:
    - Per ottenere informazioni sulle tabelle utilizzare comando: `sqlmap -r request.txt -D dvwa -T users --columns`.
    - Per ottenere il dump dei dati utilizzare comando: `sqlmap -r request.txt -D dvwa -T users --dump-all`.
    
-![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_databaseDVWA.png)
+![screenshot_SQLInjection](screenshot_SQLInjection/Screenshot_databaseDVWA.png)
 6. **Decifrazione degli Hash**: Durante il processo di estrazione dei dati, SQLmap potrebbe chiedere se si desidera decifrare gli hash delle password. Se si sceglie di farlo, SQLmap tenterà di decifrare gli hash utilizzando un dizionario predefinito.
-![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_hash.png)
+![screenshot_SQLInjection](screenshot_SQLInjection/Screenshot_hash.png)
 
 ### Conclusioni
 
