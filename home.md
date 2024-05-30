@@ -12,16 +12,17 @@ Questo report presenta un'analisi dettagliata di due comuni strumenti d'attacco 
 4. Configurare FoxyProxy su Firefox per reindirizzare il traffico attraverso Burp Suite. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_FoxyProxy.png)
 
 ### Attività 2: Brute Force Attack
-1. Avviare DVWA e selezionare la modalità di sicurezza "low" per facilitare l'attacco. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_sicurezzaDVWA.png)
-2. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco.![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_intercetto.png)
+1. Avviare DVWA e selezionare la modalità di sicurezza "low" per facilitare l'attacco. ![Screenshot di BruteForce](screenshot_BruteForce/Screenshot_sicurezzaDVWA.png)
+2. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco.![Screenshot di BruteForce](screenshot_BruteForce/Screenshot_intercetto.png)
 3. Utilizzare un tool di Brute Force (ad esempio Hydra) per tentare di indovinare la password di accesso a un account utente su DVWA.
-4. Analizzare il traffico con Burp Suite per identificare i tentativi di accesso non autorizzati e le possibili vulnerabilità nel sistema. ![Screenshot di FoxyProxy](screenshot_BruteForce/Screenshot_analisi.png)
+4. Analizzare il traffico con Burp Suite per identificare i tentativi di accesso non autorizzati e le possibili vulnerabilità nel sistema. ![Screenshot di BruteForce](screenshot_BruteForce/Screenshot_analisi.png)
 
 ### Attività 3: SQL Injection
-1. Avviare DVWA e selezionare la modalità di sicurezza "medium" per simulare una vulnerabilità di SQL Injection.
-2. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco.
-3. Utilizzare manualmente o uno strumento automatico per eseguire un attacco di SQL Injection contro un'applicazione web su DVWA.
-4. Analizzare il traffico con Burp Suite per identificare i tentativi di iniezione SQL e valutare l'impatto sugli schemi di database.
+1. Avviare DVWA e selezionare la modalità di sicurezza "low" per simulare una vulnerabilità di SQL Injection.
+2. Selezionare tab SQL Injection e digitare "' OR 1=1 #" per elencare i vari ID. ![Screenshot di SQLInjection](screenshot_SQLInjection/Screenshot_followingCommand.png)
+3. Utilizzare Burp Suite per monitorare il traffico web durante l'attacco. ![Screenshot di SQLInjection](screenshot_SQLInjection/Screenshot_intercetto.png)
+4. Utilizzare il terminal di Kali Linux per eseguire un attacco di SQL Injection su DVWA facendoci aiutare dall'help di SQL. ![Screenshot di SQLInjection](screenshot_SQLInjection/Screenshot_databaseDVWA.png)
+5. Analizzare il terminal per valutare il database e calcolare gli hash. ![Screenshot di SQLInjection](screenshot_SQLInjection/Screenshot_hash.png)
 
 ## Conclusioni
 Questo report ha fornito un'analisi dettagliata delle attività eseguite durante il test di Brute Force Attack e SQL Injection utilizzando Burp Suite, DVWA e FoxyProxy su Kali Linux. Le attività svolte hanno permesso di identificare vulnerabilità potenziali nel sistema e di valutare la sua resistenza agli attacchi comuni.
