@@ -3,6 +3,20 @@
 ## Introduzione
 Questo report presenta un'analisi dettagliata di due comuni tecniche di attacco informatico: il Brute Force Attack e la SQL Injection. Le attività descritte sono state eseguite utilizzando Burp Suite e DVWA su Kali Linux. Inoltre, è stato utilizzato l'addon FoxyProxy su Firefox per facilitare il controllo del traffico.
 
+## Metodi di Attacco
+
+### Brute Force Attack
+
+Il Brute Force Attack è un metodo che consiste nell'effettuare una serie di tentativi di accesso utilizzando diverse combinazioni di username e password fino a trovare quelle corrette. Questo approccio si basa sull'idea che, anche se una password è complessa, esiste sempre la possibilità di indovinarla attraverso un numero sufficientemente grande di tentativi.
+
+### SQL Injection
+
+La SQL Injection è una vulnerabilità che consente agli attaccanti di inserire comandi SQL dannosi all'interno delle query di input di un'applicazione web. Questi comandi possono manipolare il database sottostante, consentendo agli attaccanti di estrarre, modificare o eliminare dati, ottenere accesso amministrativo o eseguire altre azioni dannose.
+
+### Importanza dell'Analisi e del Test delle Vulnerabilità
+
+La comprensione e l'analisi approfondita di queste tecniche di attacco sono cruciali per garantire la sicurezza delle applicazioni web. Testare regolarmente le vulnerabilità attraverso strumenti come Burp Suite e DVWA permette di identificare e correggere le falle di sicurezza prima che possano essere sfruttate dagli attaccanti.
+
 ## Strumenti Utilizzati
 
 ### Kali Linux
