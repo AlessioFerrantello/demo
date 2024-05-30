@@ -53,31 +53,35 @@ Principali caratteristiche:
 ## Descrizione delle Attività
 
 ### Preparazione dell'Ambiente
-1. **Configurazione di DVWA**: Avviare DVWA e impostare il livello di sicurezza su "low" per facilitare l'attacco brute force e su "low" per la SQL Injection.
+1. **Configurazione di DVWA**: Avviare DVWA e impostare il livello di sicurezza su "low" per facilitare l'attacco brute force e su "low" per la SQL Injection. ![screenshot_BruteForce](screenshot_BruteForce/Screenshot_sicurezzaDVWA.png)
 2. **Configurazione di Burp Suite**: Avviare Burp Suite, creare un progetto temporaneo e accedere alla scheda "Proxy".
-3. **Configurazione di FoxyProxy**: Configurare Firefox per utilizzare Burp come proxy. Se si utilizza FoxyProxy, selezionare semplicemente l'opzione "Burp".
+3. **Configurazione di FoxyProxy**: Configurare Firefox per utilizzare Burp come proxy. Se si utilizza FoxyProxy, selezionare semplicemente l'opzione "Burp". ![screenshot_BruteForce](screenshot_BruteForce/Screenshot_FoxyProxy.png)
 
 ### Esecuzione dell'Attacco Brute Force
 
 1. **Accesso a DVWA**: Accedere alla scheda "Brute Force" su DVWA e tentare un login con credenziali errate. Questo genererà un errore "username and password incorrect".
-2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare la richiesta di login da Firefox con credenziali corrette. Burp catturerà la richiesta.
+2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare la richiesta di login da Firefox con credenziali corrette. Burp catturerà la richiesta. ![screenshot_BruteForce](screenshot_BruteForce/Screenshot_intercetto.png)
 3. **Invio a Intruder**: In Burp Suite, cliccare su "Action" e poi su "Send to Intruder". Nella scheda "Positions", rimuovere tutti i target e selezionare il campo della password come target.
 4. **Configurazione dei Payloads**: Nella scheda "Payloads", caricare una lista di parole. In questo esempio, si utilizza una lista chiamata `bruteforce.lst`.
 5. **Avvio dell'Attacco**: Avviare l'attacco. Burp Suite inizierà a tentare diverse password.
 6. **Analisi dei Risultati**: Ordinare le risposte per dimensione della lunghezza nella scheda "Length". La risposta con una lunghezza diversa indica la password corretta.
-7. **Verifica della Password**: Verificare la risposta nella scheda "Response" per confermare l'accesso riuscito.
+7. **Verifica della Password**: Verificare la risposta nella scheda "Response" per confermare l'accesso riuscito. ![screenshot_BruteForce](screenshot_BruteForce/Screenshot_analisi.png)
 
-|---------|----------|
-|![screenshot_BruteForce](Screenshot_intercetto)|![screenshot_BruteForce](Screenshot_analisi)|
 
 ### Esecuzione dell'Attacco SQL Injection
 
-1. **Accesso a DVWA**: Accedere alla scheda "SQL Injection" su DVWA. Inserire il comando `' OR 1=1 #` nel campo ID per ottenere tutte le voci del database.
-2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare una richiesta SQL Injection. La richiesta sarà catturata da Burp.
+1. **Accesso a DVWA**: Accedere alla scheda "SQL Injection" su DVWA. Inserire il comando `' OR 1=1 #` nel campo ID per ottenere tutte le voci del database. ![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_followingCommand.png)
+2. **Intercettazione della Richiesta**: Con l'intercettazione attivata su Burp Suite, inviare una richiesta SQL Injection. La richiesta sarà catturata da Burp. ![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_intercetto.png)
 3. **Salvataggio della Richiesta**: Salvare la richiesta intercettata in un file di testo (`request.txt`).
-4. **Utilizzo di SQLmap**: Utilizzare il terminal di Kali Linux per automatizzare l'attacco SQL Injection con il comando: sqlmap -h
-5. **Estrazione dati**: Per ottenere informazioni sul database DVWA utilizzare comando: sqlmap -r request.txt --dbs; per ottenere informazioni sulle tabelle utilizzare comando: sqlmap -r request.txt -D dvwa -T users --columns; per ottenere il dump dei dati utilizzare comando: sqlmap -r request.txt -D dvwa -T users --dump-all.
+4. **Utilizzo di SQLmap**: Utilizzare il terminal di Kali Linux per automatizzare l'attacco SQL Injection con il comando: `sqlmap -h`.
+5. **Estrazione dati**:
+   - Per ottenere informazioni sul database DVWA utilizzare comando: `sqlmap -r request.txt --dbs`.
+   - Per ottenere informazioni sulle tabelle utilizzare comando: `sqlmap -r request.txt -D dvwa -T users --columns`.
+   - Per ottenere il dump dei dati utilizzare comando: `sqlmap -r request.txt -D dvwa -T users --dump-all`.
+   
+![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_databaseDVWA.png)
 6. **Decifrazione degli Hash**: Durante il processo di estrazione dei dati, SQLmap potrebbe chiedere se si desidera decifrare gli hash delle password. Se si sceglie di farlo, SQLmap tenterà di decifrare gli hash utilizzando un dizionario predefinito.
+![screenshot_SQLInjection](screenshot_SQLInjectio/Screenshot_hash.png)
 
 ### Conclusioni
 
