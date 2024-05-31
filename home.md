@@ -1,7 +1,7 @@
 # Report sull'Analisi di Sicurezza: Brute Force Attack e SQL Injection
 
 ## Introduzione
-Questo report presenta un'analisi dettagliata di due comuni tecniche di attacco informatico: il Brute Force Attack e la SQL Injection. Le attività descritte sono state eseguite utilizzando Burp Suite e DVWA su Kali Linux. Inoltre, è stato utilizzato l'addon FoxyProxy su Firefox per facilitare il controllo del traffico.
+Questo report presenta un'analisi dettagliata di due comuni tecniche di attacco informatico: il Brute Force Attack e la SQL Injection. Le attività descritte sono state eseguite utilizzando Burp Suite e DVWA su Kali Linux. Inoltre, è stato utilizzato l'add-on FoxyProxy su Firefox per facilitare il controllo del traffico.
 
 ## Metodi di Attacco
 
@@ -85,12 +85,11 @@ Principali caratteristiche:
 
 ### Conclusioni
 
-Questo report ha descritto in dettaglio le attività eseguite per testare le vulnerabilità delle applicazioni web utilizzando SQL Injection. Utilizzando Burp Suite, DVWA e SQLmap su Kali Linux, è stato possibile identificare e sfruttare diverse vulnerabilità. Le tecniche illustrate evidenziano l'importanza di implementare misure di sicurezza robuste per proteggere le applicazioni web dagli attacchi comuni.
+Questo report ha descritto in dettaglio le attività eseguite per testare le vulnerabilità delle applicazioni web utilizzando brute force attack e SQL Injection. Utilizzando Burp Suite e DVWA su Kali Linux, è stato possibile identificare e sfruttare diverse vulnerabilità. Le tecniche illustrate evidenziano l'importanza di implementare misure di sicurezza robuste per proteggere le applicazioni web dagli attacchi comuni.
 
 ## Fonti Utilizzate
 Le informazioni e le tecniche utilizzate in questo report sono state acquisite attraverso una combinazione di esperienza pratica, ricerca online e studio delle migliori pratiche di sicurezza informatica. Le fonti di riferimento includono:
 - [Documentazione ufficiale di Burp Suite](https://portswigger.net/burp/documentation)
 - [Guida di utilizzo di DVWA](http://www.dvwa.co.uk/)
 - [Documentazione di SQLmap](https://sqlmap.org/)
-- Risorse online sulla sicurezza informatica e guide di formazione su strumenti di test della sicurezza.
 
