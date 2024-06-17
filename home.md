@@ -90,6 +90,6 @@ Questo report ha descritto in dettaglio le attività eseguite per testare le vul
 ## Fonti Utilizzate
 Le informazioni e le tecniche utilizzate in questo report sono state acquisite attraverso una combinazione di esperienza pratica, ricerca online e studio delle migliori pratiche di sicurezza informatica. Le fonti di riferimento includono:
 - [Documentazione ufficiale di Burp Suite](https://portswigger.net/burp/documentation)
-- [Guida di utilizzo di DVWA](http://www.dvwa.co.uk/)
+- [Guida di utilizzo di DVWA](https://www.homelab.it/index.php/2015/12/24/dvwa-damn-vulnerable-web-application/)
 - [Documentazione di SQLmap](https://sqlmap.org/)
 
